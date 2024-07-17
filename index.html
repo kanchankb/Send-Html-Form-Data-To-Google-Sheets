@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <form name="submit-to-google-sheet">
+        <h1>Registration Form &#x1F4DD;</h1>
+        <hr>
+        <br>
+        <label>Name &#x1F4DD;</label><br>
+        <input type="text" name="Name" >
+        <br><br>
+
+        <label> Email &#128231; </label><br>
+        <input type="email" name="Email">
+        <br><br>
+
+        <label> Mobile No  &#128222;</label><br>
+        <input type="Mobile No" name="Mobile No">
+        <br><br>
+
+        <label> Date of Birth &#x1F4C5; </label><br>
+        <input type="date" name="Date of Birth">
+        <br><br>
+
+        <label> Image &#x1F4F7;</label><br>
+        <input type="file" name="image">
+        <br><br>
+
+        <label>Gender<br><br>
+        <input type="radio" name="gender" value="male">Male  &#129333;</label>
+       <label> <input type="radio" name="gender"value="female">Female  &#128105;</label>
+        <br><br>
+        </label>
+
+    <input type="submit" name="submit">
+    
+
+    </form>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw76ra8aJExYdT8pBqEnoCTrQOSBCgwOUGFYXv9XvkpgQUlDMtoDRxoI6Gsfh_O7iWE/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
