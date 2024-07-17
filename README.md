@@ -66,6 +66,9 @@ code output :-
 
 ![image](https://github.com/user-attachments/assets/bd6bd86c-c61e-4e91-9468-069854780bd5)
 
+![image](https://github.com/user-attachments/assets/cf84fd19-db44-4049-a512-b15bc44a9536)
+
+
 
 
 
